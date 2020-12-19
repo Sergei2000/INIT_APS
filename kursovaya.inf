@@ -1,0 +1,39 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Smile
+  FILE_GUID                      = c227625b-c54c-4067-ba59-c44841620d28
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = test
+
+[Sources.common]
+  kursovaya.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiDriverEntryPoint
+  DebugLib
+  PrintLib
+  UefiBootServicesTableLib
+  DebugLib
+  PrintLib
+  UefiLib
+  MemoryAllocationLib
+  DebugLib
+  BaseMemoryLib
+  BaseLib
+  UefiBootServicesTableLib
+  DevicePathLib
+  UefiRuntimeServicesTableLib
+
+[Protocols]
+  gEfiMpServiceProtocolGuid
+
+[Depex]
+  gEfiMpServiceProtocolGuid
+  
